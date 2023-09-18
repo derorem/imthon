@@ -7,6 +7,6 @@ class Todo(models.Model):
         ('bajarilmoqda','Bajarilmoqda')
     )
     title=models.CharField(max_length=150)
-    time=models.TimeField()
-    docs=models.DateTimeField()
+    time=models.DateTimeField()
+    docs=models.CharField(max_length=150)
     status=models.CharField(max_length=30,choices=STATUS)

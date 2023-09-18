@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
-<body>
-$END$
+<body bgcolor="orange">
+<form style="text">
+    <h1 align="center">Kundalik reja</h1>
+</form>
+<form>
+    <input type="text" name="title" placeholder="title"><br><br>
+    <input type="datetime-local" name="time"><br><br>
+    <textarea name="docs"></textarea>
+</form>
+     <select name="status">
+          <option value="bajarildi">bajarildi</option>
+          <option value="bajarilmadi"selected>bajarilmadi</option>
+          <option value="bajarishta">bajarishta</option>
+        </select><br><br>
+
+<form>
+    <button><a href="/delate/{{todo.delate}}/">Delate</a></button>
+    <button><a href="/edito/{{todo.edito}}/">Edito</a></button>
+</form>
 </body>
 </html>
