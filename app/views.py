@@ -10,7 +10,7 @@ def __str__(self):
     return self.title
 
 
-def delate(request, Post=None):
+def delate(request,id,Post=None):
     if Post.git:
         title=Post.git('title')
         time=Post.git('time')
@@ -19,7 +19,7 @@ def delate(request, Post=None):
         Todo.objects.create(title=title,time=time,docs=docs,status=status)
         return redirect('/')
     data={
-        'todos':Todo.objects.all()
+        'todos':Todo.objects.get(id=id)
     }
     return render(request,'delate.html',data)
 
